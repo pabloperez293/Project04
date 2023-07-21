@@ -20,7 +20,8 @@ nav a{
 }
 header{
     background: rgb(68,71,163);
-    background: linear-gradient(35deg, rgba(68,71,163,1) 35%, rgba(76,178,196,1) 100%);
+    background: -webkit-linear-gradient(to right, rgba 68,71,163,1, rgba 76,178,196,1);
+    background: linear-gradient(to right, rgba(68,71,163,1) 35%, rgba(76,178,196,1) 100%);
     height: auto;
     padding: 48px;
     justify-content: space-around;
@@ -70,9 +71,35 @@ img{
 
 .wave{
     height: 1000px;
-    width: 100%;
+    width: 100%;   
     background: rgb(68,71,163);
-    background: linear-gradient(35deg, rgba(68,71,163,1) 35%, rgba(76,178,196,1) 100%);
+    background: -webkit-linear-gradient(to right, rgba 68,71,163,1, rgba 76,178,196,1);
+    background: linear-gradient(to right, #4447a3 35%, #4cb2c4 100%);
+}
+.icono{
+    z-index: 10000;
+    animation: moverIzquierda 1s ease-in;
+}
+.enlace{
+    position: fixed;
+    display: flex;
+    top: 0;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: rgb(76,178,196);
+    background: linear-gradient(152deg, rgba(76,178,196,1) 35%, rgba(68,71,163,1) 100%);
+}
+.uno{
+    clip-path: circle(100% at 0 2%);
+}
+.dos{
+    clip-path: circle(150% at 0 2%);
 
 }
 @keyframes moverIzquierda{
