@@ -10,13 +10,13 @@ body{
 nav{
     position: fixed;
     top: 20px;
-    left: 20px;    
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;    
 }
 nav a{
     color: white;
     text-decoration: none;
-    display: inline-block;
-    animation: moverIzquierda 1s ease-in;
 }
 header{
     background: rgb(68,71,163);
@@ -70,17 +70,16 @@ img{
 }
 
 .wave{
-    height: 1000px;
-    width: 100%;   
     background: rgb(68,71,163);
     background: -webkit-linear-gradient(to right, rgba 68,71,163,1, rgba 76,178,196,1);
     background: linear-gradient(to right, #4447a3 35%, #4cb2c4 100%);
 }
 .icono{
-    z-index: 10000;
+    display: block;
     animation: moverIzquierda 1s ease-in;
+    z-index: 10000000000;
 }
-.enlace{
+.enlaces{
     position: fixed;
     display: flex;
     top: 0;
@@ -96,7 +95,7 @@ img{
     background: linear-gradient(152deg, rgba(76,178,196,1) 35%, rgba(68,71,163,1) 100%);
 }
 .uno{
-    clip-path: circle(100% at 0 2%);
+    clip-path: circle(0% at 0 2%);
 }
 .dos{
     clip-path: circle(150% at 0 2%);
@@ -130,5 +129,71 @@ img{
     100%{
         opacity: 1;
         transform: translate(0px);
+    }
+}
+/* Responsive */
+@media screen and (max-width:1000px){
+    img{
+        height: 370px;
+    }
+}
+@media screen and (max-width:800px){
+    img{
+        height: 400px;
+    }
+    .textos h1{
+        font-size: 70px;
+    }
+    .textos h2{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:700px){
+    img{
+        height: 260px;
+    }
+    .textos h1{
+        font-size: 40px;
+    }
+    .textos h2{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:450px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .textos{
+        width: 100%;
+        text-align: center;
+    }
+    .textos h1{
+        font-size: 60px;
+    }
+    .textos h2{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:340px){
+ 
+    img{
+        height: 160px;
+    }
+    .textos{
+        width: 100%;
+        text-align: center;
+    }
+    .textos h1{
+        font-size: 35px;
+    }
+    .textos h1{
+        font-size: 15px;
+    }
+    .textos a{
+        width: 120px;
+        font-size: 15px;
     }
 }
